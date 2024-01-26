@@ -78,7 +78,6 @@ export default defineComponent({
   //   };
   // },
   setup() {
-    const _this:any = this;
     type metaVo = {
       title: String
     };
@@ -93,10 +92,10 @@ export default defineComponent({
     };
     const menus = ref<menusVo[]>(routers.menus);
     function go(page:routerVo) {
-      _this.$router.push({name: page.name});
+      this.$router.push({name: page.name});
     }
     function goHome() {
-      _this.$router.push({name: 'Home'});
+      this.$router.push({name: 'Home'});
     }
     return {
       isVue2,
